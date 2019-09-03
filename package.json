@@ -1,0 +1,30 @@
+{
+  "name": "@sil/link",
+  "description": "The Button or Anchor Link",
+  "author": "Sil van Diepen",
+  "version": "0.0.1",
+  "main": "dist/sil-link.umd.js",
+  "module": "dist/sil-link.esm.js",
+  "unpkg": "dist/sil-link.min.js",
+  "browser": {
+    "./sfc": "src/sil-link.vue"
+  },
+  "scripts": {
+    "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/sil-link.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/sil-link.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/sil-link.min.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "minimist": "^1.2.0",
+    "rollup": "^1.20.3",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-uglify-es": "0.0.1",
+    "rollup-plugin-vue": "^5.0.1",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "license": "ISC"
+}
