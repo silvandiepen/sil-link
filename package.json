@@ -3,17 +3,18 @@
   "description": "The Button or Anchor Link",
   "author": "Sil van Diepen",
   "version": "0.0.1",
-  "main": "dist/sil-link.umd.js",
-  "module": "dist/sil-link.esm.js",
-  "unpkg": "dist/sil-link.min.js",
+  "main": "dist/link.umd.js",
+  "module": "dist/link.esm.js",
+  "unpkg": "dist/link.min.js",
   "browser": {
-    "./sfc": "src/sil-link.vue"
+    "./sfc": "src/link.vue"
   },
+  "style": "dist/button.css",
   "scripts": {
     "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
-    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/sil-link.umd.js",
-    "build:es": "rollup --config build/rollup.config.js --format es --file dist/sil-link.esm.js",
-    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/sil-link.min.js"
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/link.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/link.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/link.min.js"
   },
   "dependencies": {},
   "devDependencies": {
@@ -21,6 +22,7 @@
     "rollup": "^1.20.3",
     "rollup-plugin-buble": "^0.19.8",
     "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-scss": "^1.0.2",
     "rollup-plugin-uglify-es": "0.0.1",
     "rollup-plugin-vue": "^5.0.1",
     "vue": "^2.6.10",

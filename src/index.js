@@ -1,6 +1,8 @@
 // Import vue component
 import link from './link.vue';
 
+import './button.scss'
+
 // install function executed by Vue.use()
 export function install(Vue) {
 	if (install.installed) return;
@@ -28,7 +30,7 @@ if (GlobalVue) {
 }
 
 // To allow use as module (npm/webpack/etc.) export component
-export default sil-link;
+export default link;
 
 // It's possible to expose named exports when writing components that can
 // also be used as directives, etc. - eg. import { RollupDemoDirective } from 'rollup-demo';
