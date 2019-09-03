@@ -1,3 +1,4 @@
+$button-class: 'button' !default;
 $button-primary-color: #{var(--button-primary-color, blue)} !default;
 $button-light-color: #{var(--button-light-color, white)} !default;
 $button-dark-color: #{var(--button-dark-color, black)} !default;
@@ -13,7 +14,7 @@ $button-padding: #{var(
 		var(--button-padding-y, 0.75rem) var(--button-padding-x, 1.5rem)
 	)} !default;
 
-.button {
+.#{$button-class} {
 	position: relative;
 	display: inline-block;
 	border: none;
@@ -60,7 +61,7 @@ $button-padding: #{var(
 				}
 			}
 		}
-		.button__text {
+		.#{$button-class}__text {
 			animation: bumpButtonText $button-transition $button-cubic-bezier;
 			@at-root {
 				@keyframes bumpButtonText {
@@ -73,7 +74,7 @@ $button-padding: #{var(
 				}
 			}
 		}
-		.button__icon {
+		.#{$button-class}__icon {
 			animation: bumpButtonIcon $button-transition $button-cubic-bezier;
 			@at-root {
 				@keyframes bumpButtonIcon {
@@ -96,7 +97,7 @@ $button-padding: #{var(
 		font-family: inherit;
 		transition: transform $button-transition $button-cubic-bezier;
 	}
-	& + .button {
+	& + .#{$button-class} {
 		margin-left: 1rem;
 	}
 
@@ -115,23 +116,23 @@ $button-padding: #{var(
 		--button-text: #{$button-primary-color};
 		--button-box-color: #{$button-primary-color};
 		border-radius: 1.5rem;
-		.button__icon {
+		.#{$button-class}__icon {
 			right: auto;
 			left: 0rem;
 			background-color: #{$button-primary-color};
 			color: white;
 			transition: left $button-transition $button-cubic-bezier;
 		}
-		&.button--icon {
+		&.#{$button-class}--icon {
 			padding-left: 2.5rem;
 		}
 		&:focus {
-			&.button--icon {
-				.button__text {
+			&.#{$button-class}--icon {
+				.#{$button-class}__text {
 					transform: translateX(0.5rem);
 				}
 			}
-			.button__icon {
+			.#{$button-class}__icon {
 				left: 0.5rem;
 			}
 		}
@@ -144,10 +145,10 @@ $button-padding: #{var(
 		font-size: 1rem;
 		padding-left: 0;
 		padding-right: 0;
-		&.button--icon {
+		&.#{$button-class}--icon {
 			padding-right: 2.5rem;
 		}
-		.button__icon {
+		.#{$button-class}__icon {
 			left: 0.5rem;
 			font-size: 0.75em;
 		}

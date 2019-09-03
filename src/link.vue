@@ -20,7 +20,7 @@ export default {
 		buttonColor: 'default'
 	}),
 	created() {
-		const isLink = new RegExp('^(http|https|mailto|tel)://');
+		const isLink = new RegExp('^(http://|https://|tel:|mailto:)');
 		// Determine type of link
 		if (this.$props && this.$props.link && this.$props.link.match(isLink)) this.buttonType = 'a';
 		else if (this.$props && this.$props.link) this.buttonType = 'router-link';

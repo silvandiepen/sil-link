@@ -26,7 +26,7 @@
 			buttonColor: 'default'
 		}); },
 		created: function created() {
-			var isLink = new RegExp('^(http|https|mailto|tel)://');
+			var isLink = new RegExp('^(http://|https://|tel:|mailto:)');
 			// Determine type of link
 			if (this.$props && this.$props.link && this.$props.link.match(isLink)) { this.buttonType = 'a'; }
 			else if (this.$props && this.$props.link) { this.buttonType = 'router-link'; }
