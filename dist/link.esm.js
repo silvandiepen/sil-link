@@ -180,7 +180,7 @@ var __vue_script__ = script;
   
 
   
-  var link = normalizeComponent_1(
+  var buttonLink = normalizeComponent_1(
     {},
     __vue_inject_styles__,
     __vue_script__,
@@ -197,10 +197,8 @@ var __vue_script__ = script;
 function install(Vue) {
 	if (install.installed) { return; }
 	install.installed = true;
-
 	
-	Vue.component('link', link);
-	
+	Vue.component('buttonLink', buttonLink);	
 }
 
 // Create module definition for Vue.use()
@@ -223,5 +221,5 @@ if (GlobalVue) {
 // also be used as directives, etc. - eg. import { RollupDemoDirective } from 'rollup-demo';
 // export const RollupDemoDirective = component;
 
-export default link;
+export default buttonLink;
 export { install };

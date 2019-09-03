@@ -1,5 +1,5 @@
 // Import vue component
-import link from './link.vue';
+import buttonLink from './link.vue';
 
 import './button.scss'
 
@@ -7,10 +7,8 @@ import './button.scss'
 export function install(Vue) {
 	if (install.installed) return;
 	install.installed = true;
-
 	
-	Vue.component('link', link);
-	
+	Vue.component('buttonLink', buttonLink);	
 }
 
 // Create module definition for Vue.use()
@@ -30,7 +28,7 @@ if (GlobalVue) {
 }
 
 // To allow use as module (npm/webpack/etc.) export component
-export default link;
+export default buttonLink;
 
 // It's possible to expose named exports when writing components that can
 // also be used as directives, etc. - eg. import { RollupDemoDirective } from 'rollup-demo';

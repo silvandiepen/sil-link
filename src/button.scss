@@ -93,6 +93,7 @@ $button-padding: #{var(
 		display: block;
 		font-size: inherit;
 		transform: scale(1);
+		font-family: inherit;
 		transition: transform $button-transition $button-cubic-bezier;
 	}
 	& + .button {
@@ -149,6 +150,16 @@ $button-padding: #{var(
 		.button__icon {
 			left: 0.5rem;
 			font-size: 0.75em;
+		}
+	}
+	@if variable-exists('colors') {
+		@each $color-name, $color-value in $colors {
+			&--#{to-lower-case($color-name)} {
+				color: contra($color-value);
+				&::before {
+					background-color: $color-value;
+				}
+			}
 		}
 	}
 	&--icon {

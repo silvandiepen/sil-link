@@ -186,7 +186,7 @@
 	  
 
 	  
-	  var link = normalizeComponent_1(
+	  var buttonLink = normalizeComponent_1(
 	    {},
 	    __vue_inject_styles__,
 	    __vue_script__,
@@ -203,10 +203,8 @@
 	function install(Vue) {
 		if (install.installed) { return; }
 		install.installed = true;
-
 		
-		Vue.component('link', link);
-		
+		Vue.component('buttonLink', buttonLink);	
 	}
 
 	// Create module definition for Vue.use()
@@ -229,7 +227,7 @@
 	// also be used as directives, etc. - eg. import { RollupDemoDirective } from 'rollup-demo';
 	// export const RollupDemoDirective = component;
 
-	exports.default = link;
+	exports.default = buttonLink;
 	exports.install = install;
 
 	Object.defineProperty(exports, '__esModule', { value: true });

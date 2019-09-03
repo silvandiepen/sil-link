@@ -59,6 +59,7 @@
     display: block;
     font-size: inherit;
     transform: scale(1);
+    font-family: inherit;
     transition: transform var(--button-transition, 0.3s) var(--button-cubic-bezier, ease-in-out); }
   .button + .button {
     margin-left: 1rem; }
