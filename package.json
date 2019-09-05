@@ -2,7 +2,7 @@
   "name": "@sil/link",
   "description": "The Button or Anchor Link",
   "author": "Sil van Diepen",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "dist/link.umd.js",
   "module": "dist/link.esm.js",
   "unpkg": "dist/link.min.js",
