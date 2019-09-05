@@ -108,7 +108,7 @@ $button-padding: #{var(
 
 	@if variable-exists('colors') {
 		@each $color-name, $color-value in $colors {
-			&--default&--#{to-lower-case($color-name)} {
+			&--#{to-lower-case($color-name)} {
 				color: contra($color-value);
 				&::before {
 					background-color: $color-value;
