@@ -10,6 +10,10 @@ export default {
 			type: String,
 			default: null
 		},
+		type: {
+			type: String,
+			default: 'default'
+		},
 		icon: {
 			type: String,
 			default: null
@@ -34,6 +38,7 @@ export default {
 			return [
 				'button',
 				this.$props.color ? `button--${this.$props.color}` : null,
+				this.$props.type ? `button--${this.$props.type}` : null,
 				this.$props.icon ? `button--icon` : null
 			];
 		}
@@ -50,9 +55,11 @@ export default {
 					},
 					class: this.buttonClasses()
 				},
-				[
+			[
 					h('span', { class: ['button__text'] }, this.$slots.default),
-					this.$props.icon ? h('span', { class: ['button__icon', `icon--${this.$props.icon}`] }) : null
+					this.$props.icon
+						? h('span', { class: ['button__icon'] }, [h('span', { class: [`icon--${this.$props.icon}`] })])
+						: null
 				]
 			);
 		} else {
@@ -68,7 +75,7 @@ export default {
 				[
 					h('span', { class: ['button__text'] }, this.$slots.default),
 					this.$props.icon
-						? h('span', { class: ['button__icon'] }, [h('span', { class: [`silicon-${this.$props.icon}`] })])
+						? h('span', { class: ['button__icon'] }, [h('span', { class: [`icon--${this.$props.icon}`] })])
 						: null
 				]
 			);
