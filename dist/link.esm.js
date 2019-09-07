@@ -10,7 +10,7 @@ var script = {
 			type: String,
 			default: null
 		},
-		type: {
+		model: {
 			type: String,
 			default: 'default'
 		},
@@ -38,7 +38,7 @@ var script = {
 			return [
 				'button',
 				this.$props.color ? ("button--" + (this.$props.color)) : null,
-				this.$props.type ? ("button--" + (this.$props.type)) : null,
+				this.$props.model ? ("button--" + (this.$props.model)) : null,
 				this.$props.icon ? "button--icon" : null
 			];
 		}
